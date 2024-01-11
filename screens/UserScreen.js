@@ -12,7 +12,7 @@ export default function UserScreen() {
     <SafeAreaView className='flex-1 mx-10'>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        style={{marginBottom:widthPercentageToDP('20%')}}
+        style={{ marginBottom: widthPercentageToDP('10%') }}
       >
 
         <Text className='text-black font-semibold text-4xl py-5'>My Profile</Text>
@@ -60,7 +60,7 @@ export default function UserScreen() {
               <Text className="font-semi text-lg px-2 ">Offers and Promo</Text>
             </View>
             <TouchableOpacity
-              onPress={() => navigation.navigate('Orders')}
+              onPress={() => navigation.navigate('Offers')}
             >
               <Icon.ChevronRight stroke='black' />
             </TouchableOpacity>

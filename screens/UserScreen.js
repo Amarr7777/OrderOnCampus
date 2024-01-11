@@ -1,6 +1,6 @@
 import { View, Text, SafeAreaView, TouchableOpacity, Image, TouchableNativeFeedback, TouchableWithoutFeedback, ScrollView } from 'react-native'
 import React from 'react'
-import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen'
+import { heightPercentageToDP as hp, widthPercentageToDP, widthPercentageToDP as wp } from 'react-native-responsive-screen'
 import { useNavigation } from '@react-navigation/native';
 import * as Icon from "react-native-feather";
 
@@ -12,7 +12,7 @@ export default function UserScreen() {
     <SafeAreaView className='flex-1 mx-10'>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        className="mb-10"
+        style={{marginBottom:widthPercentageToDP('20%')}}
       >
 
         <Text className='text-black font-semibold text-4xl py-5'>My Profile</Text>
@@ -47,7 +47,7 @@ export default function UserScreen() {
             <TouchableOpacity
               onPress={() => navigation.navigate('Orders')}
             >
-              <Icon.ArrowRight stroke='black' />
+              <Icon.ChevronRight stroke='black' />
             </TouchableOpacity>
           </View>
         </View>
@@ -62,7 +62,7 @@ export default function UserScreen() {
             <TouchableOpacity
               onPress={() => navigation.navigate('Orders')}
             >
-              <Icon.ArrowRight stroke='black' />
+              <Icon.ChevronRight stroke='black' />
             </TouchableOpacity>
           </View>
         </View>
@@ -77,7 +77,7 @@ export default function UserScreen() {
             <TouchableOpacity
               onPress={() => navigation.navigate('Orders')}
             >
-              <Icon.ArrowRight stroke='black' />
+              <Icon.ChevronRight stroke='black' />
             </TouchableOpacity>
           </View>
         </View>
@@ -92,7 +92,7 @@ export default function UserScreen() {
             <TouchableOpacity
               onPress={() => navigation.navigate('Orders')}
             >
-              <Icon.ArrowRight stroke='black' />
+              <Icon.ChevronRight stroke='black' />
             </TouchableOpacity>
           </View>
         </View>
@@ -107,7 +107,7 @@ export default function UserScreen() {
             <TouchableOpacity
               onPress={() => navigation.navigate('Orders')}
             >
-              <Icon.ArrowRight stroke='black' />
+              <Icon.ChevronRight stroke='black' />
             </TouchableOpacity>
           </View>
         </View>
@@ -122,19 +122,6 @@ export default function UserScreen() {
             </View>
           </TouchableOpacity>
         </View>
-        {/* <View className=' px-5 py-2'
-        style={{ bottom: wp('20%'), width: wp("70%") }}
-        onPress={() => navigation.navigate('Tab')}
-      >
-        <TouchableOpacity className="flex-row bg-green-900 p-5 shadow items-center justify-center rounded-lg"
-          onPress={() => navigation.navigate('Login')}
-          style={{ width: wp('70%') }}
-        >
-          <View >
-            <Text className="font-semi text-lg text-white text-center px-2 ">Log Out</Text>
-          </View>
-        </TouchableOpacity>
-      </View> */}
       </ScrollView>
     </SafeAreaView>
   )

@@ -1,10 +1,14 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
-import { categories } from '../constants'
+import { allCanteens, categories } from '../constants'
+import CanteenSlide from './CanteenSlide';
 
 export default function Categories() {
     const [activeCategory, setActiveCategory] = useState(1);
+    // const canteens = [allCanteens];
+    console.log("in category ", activeCategory)
     return ( 
+        <>
         <View
             showsHorizontalScrollIndicator={false}
             className="overflow-visible gap-10 pt-10 items-center justify-evenly flex-row  "
@@ -17,7 +21,8 @@ export default function Categories() {
                     return (
                         <View key={index}>
                             <TouchableOpacity className={btnClasss}
-                                onPress={() => setActiveCategory(categories.id)}>
+                                onPress={() => {setActiveCategory(categories.id);
+                                }}>
                                 <Text className={txtClasss}>{categories.name}</Text>
                             </TouchableOpacity>
                         </View>
@@ -25,5 +30,7 @@ export default function Categories() {
                 })
             }
         </View>
+        <CanteenSlide activeCategory = {activeCategory}/>
+        </>
     )
 }

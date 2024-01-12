@@ -3,20 +3,29 @@ import React from 'react'
 import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen'
 import { useNavigation } from '@react-navigation/native';
 
-export default function CanteenRow() {
-    const navigation = useNavigation();
+export default function CanteenRow({ canteen }) {
+  const navigation = useNavigation();
+  const favoriteCanteens = canteen.filter(canteen => canteen.favorite == true);
   return (
-    <TouchableOpacity className="flex-col items-center p-5 shadow bg-white rounded-lg mb-5 mt-2 "
-    onPress={()=>navigation.navigate('Canteen')}
-    >
-      <Image
-        className="rounded-lg"
-        source={require('../assets/restaurant.jpg')}
-        style={{ width : hp('40%') , height: hp('20%') }} 
-      />
-      <View className="flex flex-1">
-        <Text className="font-bold text-xl ml-4">Christ Bakery</Text>
-      </View>
-    </TouchableOpacity>
+    <>
+      {
+        favoriteCanteens.map((canteen, index) => {
+          return (
+            <TouchableOpacity key={index} className="flex-col items-center p-5 shadow bg-white rounded-lg mb-5 mt-2 "
+              onPress={() => navigation.navigate('Canteen', { ...canteen })}
+            >
+              <Image
+                className="rounded-lg"
+                source={canteen.image}
+                style={{ width: hp('40%'), height: hp('20%') }}
+              />
+              <View className="flex flex-1">
+                <Text className="font-bold text-xl ml-4">{canteen.name}</Text>
+              </View>
+            </TouchableOpacity>
+          )
+        })
+      }
+    </>
   )
 }

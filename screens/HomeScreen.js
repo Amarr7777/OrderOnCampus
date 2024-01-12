@@ -6,6 +6,7 @@ import * as Icon from "react-native-feather";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { useNavigation } from '@react-navigation/native'
 import { allCanteens } from '../constants';
+import Categories from '../components/Categories';
 
 
 export default function HomeScreen() {
@@ -27,7 +28,8 @@ export default function HomeScreen() {
                 </View>
 
             </View>
-            <CanteenSlide />
+            <Categories/>
+            {/* <CanteenSlide /> */}
         </SafeAreaView>
     )
 }

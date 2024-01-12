@@ -22,7 +22,8 @@ export const allCanteens = {
             image: require('../assets/restaurant.jpg'),
             description: 'Hot and spicy pizzas',
             location: 'Basement central block',
-            categories: ('all','breakfast','lunch','snacks'),
+            categories: ['all','breakfast','lunch','snacks'],
+            favorite: true,
             dishes: [
                 {
                     id: 1,
@@ -54,7 +55,8 @@ export const allCanteens = {
             image: require('../assets/restaurant.jpg'),
             description: 'Hot and spicy pizzas',
             location: 'basement central block',
-            categories: ('all','breakfast','lunch','snacks'),
+            categories: ['all','breakfast','lunch','snacks'],
+            favorite: true,
             dishes: [
                 {
                     id: 1,
@@ -86,7 +88,8 @@ export const allCanteens = {
             image: require('../assets/restaurant.jpg'),
             description: 'Hot and spicy pizzas',
             location: 'Bird park',
-            categories: ('all','breakfast','lunch','snacks'),
+            categories: ['all','breakfast','lunch','snacks'],
+            favorite: true,
             dishes: [
                 {
                     id: 1,
@@ -118,7 +121,8 @@ export const allCanteens = {
             image: require('../assets/restaurant.jpg'),
             description: 'Hot and spicy pizzas',
             location: 'main basket ball court',
-            categories: ('all','snacks'),
+            categories: ['all','snacks'],
+            favorite: true,
             dishes: [
                 {
                     id: 1,
@@ -150,7 +154,8 @@ export const allCanteens = {
             image: require('../assets/restaurant.jpg'),
             description: 'Hot and spicy pizzas',
             location: 'basement central block',
-            categories: ('all','breakfast','lunch','snacks'),
+            categories: ['all','breakfast','lunch','snacks'],
+            favorite: true,
             dishes: [
                 {
                     id: 1,
@@ -182,7 +187,8 @@ export const allCanteens = {
             image: require('../assets/restaurant.jpg'),
             description: 'Hot and spicy pizzas',
             location: 'main basket ball court',
-            categories: ('all','snacks'),
+            categories: ['all','snacks'],
+            favorite: true,
             dishes: [
                 {
                     id: 1,
@@ -213,7 +219,8 @@ export const allCanteens = {
             image: require('../assets/restaurant.jpg'),
             description: 'Hot and spicy pizzas',
             location: 'main basket ball court',
-            categories: ('all','snacks'),
+            categories: ['all','snacks'],
+            favorite: true,
             dishes: [
                 {
                     id: 1,
@@ -245,7 +252,8 @@ export const allCanteens = {
             image: require('../assets/restaurant.jpg'),
             description: 'Hot and spicy pizzas',
             location: 'near tennis court',
-            categories: ('all','snacks'),
+            categories: ['all','snacks'],
+            favorite: true,
             dishes: [
                 {
                     id: 1,
@@ -277,7 +285,8 @@ export const allCanteens = {
             image: require('../assets/restaurant.jpg'),
             description: 'Hot and spicy pizzas',
             location: 'basement Auditorium block',
-            categories: ('all','breakfast','lunch','snacks'),
+            categories: ['all','breakfast','lunch','snacks'],
+            favorite: true,
             dishes: [
                 {
                     id: 1,
@@ -309,7 +318,8 @@ export const allCanteens = {
             image: require('../assets/restaurant.jpg'),
             description: 'Hot and spicy pizzas',
             location: 'Basement 4th Block',
-            categories: ('all','breakfast','lunch','snacks'),
+            categories: ['all','breakfast','lunch','snacks'],
+            favorite: true,
             dishes: [
                 {
                     id: 1,
@@ -341,7 +351,8 @@ export const allCanteens = {
             image: require('../assets/restaurant.jpg'),
             description: 'Hot and spicy pizzas',
             location: 'Basement central Block',
-            categories: ('all','lunch'),
+            categories: ['all','lunch'],
+            favorite: false,
             dishes: [
                 {
                     id: 1,

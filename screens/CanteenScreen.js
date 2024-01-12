@@ -7,9 +7,11 @@ import { StatusBar } from 'expo-status-bar';
 import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen';
 export default function CanteenScreen() {
   const navigation = useNavigation()
-  const [favorites, setFavorties] = useState(false);
   const { params } = useRoute();
   let item = params;
+  let checkFav = item.favorite
+  const [favorites, setFavorties] = useState(checkFav);
+  console.log(checkFav)
   return (
     <View>
       {/* <CartIcon /> */}
@@ -40,8 +42,8 @@ export default function CanteenScreen() {
           <View className="py-10 px-5 bg-white">
             <Text className="font-bold text-3xl">Menu</Text>
             {
-            item.dishes.map((dish, index) => <DishRow item={{ ...dish }} key={index} />)
-          }
+              item.dishes.map((dish, index) => <DishRow item={{ ...dish }} key={index} />)
+            }
           </View>
         </View>
       </ScrollView>

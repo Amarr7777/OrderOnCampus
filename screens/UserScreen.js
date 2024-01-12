@@ -31,7 +31,7 @@ export default function UserScreen() {
               style={{ width: hp('10%'), height: hp('10%') }}
             />
             <View>
-              <Text className="font-semi text-lg px-2 ">John Doe</Text>
+              <Text className="font-semi text-lg px-2 ">User 1</Text>
               <Text className="font-semi text-sm px-2 ">+91 9074205926</Text>
             </View>
           </View>

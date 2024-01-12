@@ -4,7 +4,7 @@ import { categories } from '../constants'
 
 export default function Categories() {
     const [activeCategory, setActiveCategory] = useState(1);
-    return (
+    return ( 
         <View
             showsHorizontalScrollIndicator={false}
             className="overflow-visible gap-10 pt-10 items-center justify-evenly flex-row  "

@@ -5,6 +5,7 @@ import CanteenSlide from '../components/CanteenSlide'
 import * as Icon from "react-native-feather";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { useNavigation } from '@react-navigation/native'
+import { allCanteens } from '../constants';
 
 
 export default function HomeScreen() {

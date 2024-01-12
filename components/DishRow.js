@@ -3,7 +3,7 @@ import React from 'react'
 import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen'
 import * as Icon from "react-native-feather";
 
-export default function DishRow() {
+export default function DishRow({item}) {
   return (
     <View className="flex-row items-center p-5 shadow bg-white rounded-lg mb-5 mt-2 ">
       <Image
@@ -12,10 +12,10 @@ export default function DishRow() {
         style={{ width : hp('10%') , height: hp('10%') }} 
       />
       <View className="flex flex-1">
-        <Text className="font-bold text-xl ml-4">melas</Text>
-        <Text className="text-gray-700 ml-4">south unindia meals</Text>
+        <Text className="font-bold text-xl ml-4">{item.name}</Text>
+        <Text className="text-gray-700 ml-4">{item.description}</Text>
         <Text className="text-green-900 font-semibold ml-4 pt-3">
-          ₹ 80
+          ₹ {item.price}
         </Text>
       </View>
 

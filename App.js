@@ -1,9 +1,8 @@
-import Navigation from './navigation';
-import TabNavigation from './tabNavigation';
+import Navigation from './router/navigation';
 export default function App() {
   return (
-    <Navigation/>
-   );
+    <Navigation />
+  );
 }
 
 

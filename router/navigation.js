@@ -7,11 +7,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-import CanteenScreen from './screens/CanteenScreen';
+import CanteenScreen from '../screens/CanteenScreen';
 import TabNavigation from './tabNavigation';
-import CartScreen from './screens/CartScreen';
-import LoginScreen from './screens/LoginScreen';
-import OfferScreen from './screens/OfferScreen';
+import CartScreen from '../screens/CartScreen';
+import LoginScreen from '../screens/LoginScreen';
+import OfferScreen from '../screens/OfferScreen';
 
 export default function navigation() {
   return (
@@ -26,7 +26,7 @@ export default function navigation() {
         <Stack.Screen name="Tab" component={TabNavigation} />
         <Stack.Screen name="Offers" component={OfferScreen} />
         <Stack.Screen name="Canteen" component={CanteenScreen} />
-        <Stack.Screen name="Cart" options={{presentation: 'modal'}} component={CartScreen} />
+        <Stack.Screen name="Cart" options={{ presentation: 'modal' }} component={CartScreen} />
       </Stack.Navigator>
     </NavigationContainer>
 

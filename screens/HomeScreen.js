@@ -1,11 +1,10 @@
-import { SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { Component, useState } from 'react'
 import { StatusBar } from 'expo-status-bar'
-import * as Icon from "react-native-feather";
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { useNavigation } from '@react-navigation/native'
 import Categories from '../components/Categories';
-import { allCanteens } from '../constants';
+import * as Icon from "react-native-feather";
+
 
 
 export default function HomeScreen() {

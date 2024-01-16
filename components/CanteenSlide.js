@@ -3,18 +3,18 @@ import React, { useState } from 'react';
 import CanteenCard from './CanteenCard';
 import { allCanteens } from '../constants';
 import * as Icon from "react-native-feather";
-import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
+import { heightPercentageToDP as hp,widthPercentageToDP as wp } from 'react-native-responsive-screen';
 
 
-export default function CanteenSlide({ activeCategory,filteredData}) {
+export default function CanteenSlide({ activeCategory, filteredData }) {
   const windowHeight = Dimensions.get('window').height;
   const allCategory = allCanteens.restaurants.filter(canteen => canteen.categories && canteen.categories.includes('all'));
   const breakfast = allCanteens.restaurants.filter(canteen => canteen.categories && canteen.categories.includes('breakfast'));
   const lunch = allCanteens.restaurants.filter(canteen => canteen.categories && canteen.categories.includes('lunch'));
   const snacks = allCanteens.restaurants.filter(canteen => canteen.categories && canteen.categories.includes('snacks'));
 
-  
-    
+
+
 
   let renderedCategory;
   let Category;
@@ -47,16 +47,18 @@ export default function CanteenSlide({ activeCategory,filteredData}) {
       )
     })
   } else {
-    if(filteredData.length > 0){
+    if (filteredData.length > 0) {
+      Category = "Campus Canteens"
       renderedCategory = [filteredData].map((canteen, index) => {
         return (
           <CanteenCard key={index} canteen={canteen} />
         )
       })
-    }else{
+    } else {
+      Category = "Campus Canteens"
       renderedCategory = (
         <View className="flex-1 items-center justify-center content-center">
-          <Icon.EyeOff stroke='gray' width={wp('100%')} height={wp('50%')}/>
+          <Icon.EyeOff stroke='gray' width={wp('100%')} height={wp('80%')} />
           <Text className="text-lg text-gray-400">No results </Text>
         </View>
       );
@@ -75,7 +77,8 @@ export default function CanteenSlide({ activeCategory,filteredData}) {
             showsHorizontalScrollIndicator={false}
             className="overflow-visible "
           >
-            <View className="flex-row items-center justify-center">
+            <View className="flex-row items-center justify-center"
+            style={{marginBottom: hp('2%')}}>
               {renderedCategory}
             </View>
           </ScrollView>

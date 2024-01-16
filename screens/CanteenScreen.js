@@ -1,20 +1,33 @@
 import { Image, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from 'react-native'
-import React, { Component, useState } from 'react'
+import React, { Component, useEffect, useState } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import * as Icon from "react-native-feather";
 import DishRow from '../components/DishRow';
 import { StatusBar } from 'expo-status-bar';
 import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectCanteen, setCanteen } from '../slices/canteenSlice';
+import CartIcon from '../components/CartIcon';
 export default function CanteenScreen() {
   const navigation = useNavigation()
   const { params } = useRoute();
   let item = params;
+
+  const canteen = useSelector(selectCanteen);
+  const dispatch = useDispatch()
+  // console.log(item);
+  useEffect(()=>{
+    if(item && item.id){
+      dispatch(setCanteen({...item}))
+    }
+  },[])
   let checkFav = item.favorite
   const [favorites, setFavorties] = useState(checkFav);
   console.log(checkFav)
+
   return (
     <View>
-      {/* <CartIcon /> */}
+      <CartIcon />
       <StatusBar style='light' />
       <ScrollView>
         <View className="relative ">

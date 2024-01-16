@@ -12,6 +12,8 @@ import TabNavigation from './tabNavigation';
 import CartScreen from '../screens/CartScreen';
 import LoginScreen from '../screens/LoginScreen';
 import OfferScreen from '../screens/OfferScreen';
+import CartIcon from '../components/CartIcon';
+import PaymentScreen from '../screens/PaymentScreen';
 
 export default function navigation() {
   return (
@@ -27,6 +29,7 @@ export default function navigation() {
         <Stack.Screen name="Offers" component={OfferScreen} />
         <Stack.Screen name="Canteen" component={CanteenScreen} />
         <Stack.Screen name="Cart" options={{ presentation: 'modal' }} component={CartScreen} />
+        <Stack.Screen name="Payment" options={{ presentation: 'fullScreenModal' }} component={PaymentScreen} />
       </Stack.Navigator>
     </NavigationContainer>
 

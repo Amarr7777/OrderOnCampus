@@ -50,7 +50,7 @@ export default function CanteenScreen() {
                 <Icon.Heart height='20' width='20' stroke={favorites ? 'white' : 'black'} strokeWidth={1} fill={favorites ? 'red' : 'white'} />
               </TouchableOpacity>
             </View>
-            <Text className="px-1 text-sm" > {item.location}</Text>
+            <Text className="px-1 text-sm " > {item.location}</Text>
           </View>
           <View className="py-10 px-5 bg-white">
             <Text className="font-bold text-3xl">Menu</Text>

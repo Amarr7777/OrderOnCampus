@@ -4,11 +4,14 @@ import { StatusBar } from 'expo-status-bar'
 import * as Icon from "react-native-feather";
 import { useNavigation } from '@react-navigation/native';
 import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen';
+import { emptyCart } from '../slices/CartSlice';
+import { useDispatch } from 'react-redux';
 
 
 export default function PaymentScreen({ route }) {
     const { orderTotal } = route.params;
     const navigation = useNavigation();
+    const dispatch = useDispatch();
     return (
         <SafeAreaView className='flex-1 items-center'>
             < StatusBar style='dark' />
@@ -19,7 +22,7 @@ export default function PaymentScreen({ route }) {
             >
                 <Icon.ArrowLeft height="20" width="20" stroke="#2A4834" strokeWidth={3} />
             </TouchableOpacity>
-            <View style={{marginTop:hp('5%')}}>
+            <View style={{ marginTop: hp('5%') }}>
                 <View className='flex-row mt-5 bg-white py-5 px-2 rounded-lg items-center justify-between'
                     style={{ width: wp('90%') }}>
                     <View className="flex-row items-center">
@@ -58,10 +61,14 @@ export default function PaymentScreen({ route }) {
                     <Text className="text-black font-extrabold">₹{orderTotal}</Text>
                 </View>
                 <TouchableOpacity
-                    className="w-full  rounded-full p-5 bg-slate-300"
+                    className="w-full  rounded-full p-5 bg-green-950"
                     style={{ width: wp('90%') }}
+                    onPress={() => {
+                        navigation.navigate('FoodPrep');
+                        dispatch(emptyCart())
+                    }}
                 >
-                    <Text className="text-green-950 text-center font-extrabold text-lg">Check Out</Text>
+                    <Text className="text-white text-center font-extrabold text-lg">Place Order</Text>
 
                 </TouchableOpacity>
             </View>

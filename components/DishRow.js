@@ -3,7 +3,7 @@ import React from 'react'
 import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen'
 import * as Icon from "react-native-feather";
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, removeFromCart, selectCartItems } from '../slices/caartSlice';
+import { addToCart, removeFromCart, selectCartItems } from '../slices/CartSlice';
 
 export default function DishRow({ item }) {
   const dispatch = useDispatch()

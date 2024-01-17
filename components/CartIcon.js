@@ -3,7 +3,7 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen';
 import { useSelector } from 'react-redux';
-import { selectCartItems, selectCartTotal } from '../slices/caartSlice';
+import { selectCartItems, selectCartTotal } from '../slices/CartSlice';
 
 
 export default function CartIcon() {
@@ -16,7 +16,7 @@ export default function CartIcon() {
       style={{ bottom: hp('10%') }}>
       <TouchableOpacity
         onPress={() => navigation.navigate('Cart')}
-        className=" flex-row flex-1 items-center justify-between bg-green-900 p-5 rounded-full mx-5 shadow-lg"
+        className=" flex-row flex-1 items-center justify-between bg-green-950 p-5 rounded-full mx-5 shadow-lg"
       >
         <View className='rounded-full p-1 py-2' style={{ backgroundColor: 'rgba(225,225,225,0.3)' }}>
           <Text className="font-extrabold text-white text-lg bg-gray rounded-full px-3">{cartItems.length}</Text>

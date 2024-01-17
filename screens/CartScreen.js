@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCanteen } from '../slices/canteenSlice';
-import { removeFromCart, selectCartItems, selectCartTotal } from '../slices/caartSlice';
+import { removeFromCart, selectCartItems, selectCartTotal } from '../slices/CartSlice';
 
 
 export default function CartScreen() {
@@ -61,8 +61,8 @@ export default function CartScreen() {
                     showsVerticalScrollIndicator={false}
                     style={{ backgroundColor: 'rgba(42, 72, 52, 1)', height: hp('100%') }}
                 >
-                    <Text className="text-center text-xl font-extrabold pt-8">Your Cart</Text>
-                    <Text className="text-center text-white-400 font-extrabold mb-3 ">{canteen.name}</Text>
+                    <Text className="text-center text-white text-xl font-extrabold pt-8">Your Cart</Text>
+                    <Text className="text-center text-white font-extrabold mb-3 ">{canteen.name}</Text>
                     {
                         Object.entries(groupedItems).map(([key, items]) => {
                             let dish = items[0];

@@ -15,6 +15,7 @@ import OfferScreen from '../screens/OfferScreen';
 import CartIcon from '../components/CartIcon';
 import PaymentScreen from '../screens/PaymentScreen';
 import FoodPrepScreen from '../screens/FoodPrepScreen';
+import RegisterScreen from '../screens/RegisterScreen';
 
 export default function navigation() {
   return (
@@ -26,6 +27,7 @@ export default function navigation() {
         }
       }>
         <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Register" component={RegisterScreen} />
         <Stack.Screen name="Tab" component={TabNavigation} />
         <Stack.Screen name="Offers" component={OfferScreen} />
         <Stack.Screen name="Canteen" component={CanteenScreen} />

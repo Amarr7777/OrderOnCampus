@@ -45,7 +45,27 @@ export const allCanteens = {
                     description: 'cheezy garlic wrap',
                     price: 10,
                     image: require('../assets/restaurant.jpg')
+                },{
+                    id: 4,
+                    name: 'pizza',
+                    description: 'cheezy garlic pizza',
+                    price: 10,
+                    image: require('../assets/restaurant.jpg')
                 },
+                {
+                    id: 5,
+                    name: 'burger',
+                    description: 'cheezy garlic burger',
+                    price: 10,
+                    image: require('../assets/restaurant.jpg')
+                },
+                {
+                    id: 6,
+                    name: 'wrap',
+                    description: 'cheezy garlic wrap',
+                    price: 10,
+                    image: require('../assets/restaurant.jpg')
+                }
             ]
 
         },
